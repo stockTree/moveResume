@@ -43,11 +43,12 @@ var result =`
     transition: all 1s;
 }
 html{
-    background:rgb(222,222,222);
+    color:rgb(222,222,222);
+    background-color:rgb(0,43,54);
     font-size:16px;
 }
 #code{
-    border:1px solid red;
+    border:1px solid white;
     padding:16px;
 }
 /*我需要加一点的高亮*/
@@ -64,30 +65,38 @@ html{
 
 /*加点3D效果*/
 
-html{transform:rotate(360deg);}
+html{
+    perspective:1000px;
+
+}
 
 /*不玩了我来介绍下我自己吧*/
 /*我们需要一张白纸*/
 #code{
+    top:16px;
     position:fixed;
-    left:0;
-    width:50%;
-    height:100vh;
+    left:7vw;
+    width:42vw;
+    transtion:.5;
+    height:90vh;
+    transform:rotateY(10deg) translateZ(-100px);
 }
 #paper{
+    top:15px;
+    transtion:.5;
+    transform:rotateY(-10deg) translateZ(-100px);
     position:fixed;
-    right:0;
-    width:50%;
-    height:100vh;
-    background:black;
+    right:7vw;
+    width:42vw;
     display:flex;
     justify-content:center;
     align-items:center;
-    padding:16px;
+    color:rgb(0,43,54);
+    background:white;
     }
 #paper > .content{
-        background:white;
-        height:100%;
+        
+       height:90vh;
         width:100%;
     }
 
