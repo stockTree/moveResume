@@ -26,7 +26,7 @@ function writeMarkdown(markdown,fn){
             window.clearInterval(id)
             fn.call()
         }
-    },10)
+    },50)
 
 
 
